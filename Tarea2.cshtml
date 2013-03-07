@@ -1,0 +1,45 @@
+﻿using System;
+using System.Collections;
+
+namespace Programacion3
+{
+	public class Tarea2
+	{
+		 public static void Main()  {
+
+      ArrayList miLista = new ArrayList();
+      miLista.Add("Manzana");
+      miLista.Add("Guayaba");
+      miLista.Add("Naranja");
+
+      miLista[0] = "Manzana";
+      miLista[1] = "Guayaba";
+      miLista[2] = "Naranja";
+      
+      
+      Console.WriteLine( "miLista" );
+      Console.WriteLine( "    Count:    {0}", miLista.Count );
+      Console.WriteLine( "    Capacidad: {0}", miLista.Capacity );
+      
+      Console.Write("Introduce la posicion: ");
+      int opcion = int.Parse(Console.ReadLine());
+      
+      if (opcion>2){
+      	Console.WriteLine("Numero no Valido. Introduzca un numero del 0 al 2");
+      	Console.ReadKey();
+      }
+      
+      else {
+      Console.WriteLine("Elemento {0} es \"{1}\"", opcion, miLista[opcion]);
+      
+      Console.ReadKey();
+   		}
+	}
+   public static void PrintValues( IEnumerable miLista )  {
+      foreach ( Object obj in miLista )
+         Console.Write( "   {0}", obj );
+      Console.WriteLine();
+		
+	}
+	}
+}
